@@ -1,0 +1,55 @@
+created folder in our system
+right click to access terminal
+git --version
+docker build -t app .
+docker run -itd -p 5000:5000 --rm --name hello-app app
+i access it by localhost:5000
+
+git init
+git status
+git add .
+git status
+git commit -m "initial commit"
+git status
+git log
+
+#made changes in files
+git status
+git add .
+git commit -m "2nd commit"
+
+git diff COMMIT_ID_1 COMMIT_ID_2
+git revert COMMIT_ID_1
+
+#push file to github repo
+#go to github and create a repo and it will give you a repo url and copy that
+git remote add origin REPO_URL
+git push origin master ( can check it by going to your repo)
+
+#open cloudshell to be 2nd dev
+git clone REPO_URL
+ls
+cd _____
+vim index.txt  #made some chnages
+git commit -am "comit done by 2nd dev"
+          git config --global user.email "you@example.com"
+		  git config --global user.name "Your Name"
+		  
+git commit -am "commit done by 2nd dev"
+git status
+git log
+
+git push origin master
+     username - _________
+	 password - settings ---> developer settings ----> personal access token ---> token clasic ---> create token (paste the token in password)
+	 
+#can see the changes being pushed in repo
+
+#1st dev terminal
+git fetch
+git pull origin master
+
+#branching in git
+git checkout -b BRANCH_NAME
+git branch
+git checkout master

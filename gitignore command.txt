@@ -1,0 +1,16 @@
+GITIGNORE
+
+we created a folder which containes files -- index.txt and password (password containes confidential data which i do not want to push)
+open the terminal 
+git init
+git status (can see the file index.txt and password)
+went bcak to folder and created a new file ---> .gitignore (containes -- password)
+went back to my terminal _
+git status (now i can see index.txt and .gitignore)
+git add .
+git commit -m "_____"
+created a repo in github
+terminal ---> git remote add origin REPO_URL
+			git push origin master 
+			
+can check by refreshing github repo that instead 3 file index.txt, .gitignore and password. Only two file get pushed.

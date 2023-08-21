@@ -1,0 +1,29 @@
+#MERGE
+-> fast forward merge
+	created a file 
+	initialize the git
+	commit the changes --> git commit -m "commit 1"
+	created a new branch ---> git checkout -b dev
+	in dev branch = do some changes in file locally 
+	commit the changes in dev branch --->  git commit -am "commit 2 in dev"
+										   git log (2 commit can be seen)
+	git checkout master
+ now i want "commit 2 in dev" to be in my master branch
+         git log (only one commit can be seen)
+         git merge dev
+         git log (can see two commit)
+ 
+-->3-way merge
+    git checkout dev (do some changes in file)
+	second commit in dev ---> git commit -am "commit 3 in dev" 
+	git log
+	git checkout master (do some more changes)
+	second commit in master ---> git commit -am "commit 4"
+	git log
+	git merge dev (it will raise a conflict, it dev to do changes, for changesgo to file locally and according to me)
+	git add .
+	git status 
+	git commit -m "conflict resolved"
+	git log (observe the log file)
+	git log --graph
+	git log --oneline
